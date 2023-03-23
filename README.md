@@ -1,11 +1,11 @@
-About mne-bids-pipeline
-=======================
+About mne-bids-pipeline-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mne-bids-pipeline-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/mne-bids-pipeline/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mne-bids-pipeline-feedstock/blob/main/LICENSE.txt)
 
 Summary: A standardized processing pipeline for your MEG and EEG data
 
