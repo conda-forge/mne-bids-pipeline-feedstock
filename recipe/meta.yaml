@@ -30,6 +30,7 @@ requirements:
     - joblib >=0.14
     - threadpoolctl
     - dask
+    - bokeh <3
     - jupyter-server-proxy
     - scikit-learn
     - pandas
