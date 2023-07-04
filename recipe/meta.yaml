@@ -33,6 +33,9 @@ requirements:
     - bokeh <3
     - jupyter-server-proxy
     - scikit-learn
+    - numpy
+    - scipy
+    - matplotlib-base
     - pandas
     - seaborn
     - json_tricks
@@ -46,6 +49,7 @@ requirements:
     - mne-base >=1.2
     - h5io
     - mne-bids >=0.11.1
+    - nibabel
     - filelock
     - setuptools >=65.0  # https://github.com/pypa/setuptools_scm/#retrieving-package-version-at-runtime
 
