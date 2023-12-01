@@ -22,9 +22,9 @@ requirements:
     - pip
     - setuptools >=65.0
     - setuptools_scm
-    - python >=3.8
+    - python >=3.9
   run:
-    - python >=3.8
+    - python >=3.9
     - psutil
     - packaging
     - joblib >=0.14
@@ -52,7 +52,6 @@ requirements:
     - nibabel
     - filelock
     - pydantic
-    - typing_extensnsions
     - setuptools >=65.0  # https://github.com/pypa/setuptools_scm/#retrieving-package-version-at-runtime
 
 test:
