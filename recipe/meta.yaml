@@ -51,6 +51,8 @@ requirements:
     - mne-bids >=0.11.1
     - nibabel
     - filelock
+    - pydantic
+    - typing-extensnsions  # [py<=39]
     - setuptools >=65.0  # https://github.com/pypa/setuptools_scm/#retrieving-package-version-at-runtime
 
 test:
