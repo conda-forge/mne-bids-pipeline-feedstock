@@ -1,5 +1,5 @@
 {% set name = "mne-bids-pipeline" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mne-bids-pipeline-{{ version }}.tar.gz
-  sha256: 976dd17555e46d5541e99a2779fedb9e542f5b72b92a7105a7e2d2723d0e3860
+  sha256: ad50fab859ea0638950533c24abde33d1c5d41b8bf33480028fa8c98792cb707
 
 build:
   number: 0
@@ -22,9 +22,9 @@ requirements:
     - pip
     - setuptools >=65.0
     - setuptools_scm
-    - python >=3.8
+    - python >=3.9
   run:
-    - python >=3.8
+    - python >=3.9
     - psutil
     - packaging
     - joblib >=0.14
@@ -51,6 +51,7 @@ requirements:
     - mne-bids >=0.11.1
     - nibabel
     - filelock
+    - pydantic
     - setuptools >=65.0  # https://github.com/pypa/setuptools_scm/#retrieving-package-version-at-runtime
 
 test:
