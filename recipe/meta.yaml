@@ -52,7 +52,7 @@ requirements:
     - nibabel
     - filelock
     - pydantic
-    - typing-extensnsions
+    - typing_extensnsions
     - setuptools >=65.0  # https://github.com/pypa/setuptools_scm/#retrieving-package-version-at-runtime
 
 test:
