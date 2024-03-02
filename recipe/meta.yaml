@@ -1,5 +1,5 @@
 {% set name = "mne-bids-pipeline" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mne-bids-pipeline-{{ version }}.tar.gz
-  sha256: ad50fab859ea0638950533c24abde33d1c5d41b8bf33480028fa8c98792cb707
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 35a10ae04b6bdeb64713eb643a4b2b6a6edceb4ebd9d4358b8b8288150c33ee5
 
 build:
   number: 0
