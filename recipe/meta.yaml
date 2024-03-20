@@ -52,6 +52,7 @@ requirements:
     - nibabel
     - filelock
     - pydantic
+    - annotated-types
 
 test:
   imports:
