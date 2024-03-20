@@ -53,6 +53,7 @@ requirements:
     - filelock
     - pydantic
     - annotated-types
+    - tqdm
 
 test:
   imports:
