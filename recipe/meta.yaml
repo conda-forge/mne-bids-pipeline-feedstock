@@ -1,7 +1,5 @@
-{% set python_min = '3.10' %}
 {% set name = "mne-bids-pipeline" %}
-{% set version = "1.9.0" %}
-
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,69 +7,72 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b457c78bf44748143b32dad15e3885d29d654b40b5c9f64937ca3fe80e8638d2
+  sha256: 665c6b10c15a07851f1f011ffac428715e23a3b16540c1ac8dc1ce6af9308b70
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
-  noarch: python
   entry_points:
     - mne_bids_pipeline = mne_bids_pipeline._main:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - pip
-    - hatchling
-    - hatch-vcs
     - python {{ python_min }}
+    - hatch-vcs
+    - hatchling
+    - pip
   run:
     - python >={{ python_min }}
-    - psutil
-    - packaging
-    - joblib >=0.14
-    - threadpoolctl
-    - dask
+    - annotated-types
+    - autoreject
     - bokeh
-    - jupyter-server-proxy
-    - scikit-learn
-    - numpy
-    - scipy
-    - matplotlib-base
-    - pandas
-    - pyarrow
-    - seaborn
+    - dask
+    - filelock
+    - h5io
+    - joblib >=0.14
     - json_tricks
-    - rich
+    - jupyter-server-proxy
+    - matplotlib-base
+    - meegkit
+    - mne-bids
+    - mne-icalabel
+    - mne-base >=1.7
+    - nibabel
+    - numpy
+    - openpyxl
+    - packaging
+    - pandas
+    - psutil
+    - pyarrow
+    - pydantic >=2.0.0
     - python-picard
-    - qtpy
     - pyvista
     - pyvistaqt
-    - openpyxl
-    - autoreject
-    - mne-base >=1.7
-    - h5io
-    - mne-bids
-    - nibabel
-    - filelock
-    - pydantic >=2.0.0
-    - annotated-types
-    - tqdm
+    - qtpy
+    - rich
+    - scikit-learn
+    - scipy
+    - seaborn
+    - threadpoolctl
 
 test:
   imports:
     - mne_bids_pipeline
   commands:
     - pip check
-    - mne_bids_pipeline --version
+    - mne_bids_pipeline --help
   requires:
     - pip
     - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/mne-bids-pipeline/
-  summary: A standardized processing pipeline for your MEG and EEG data
-  license: BSD-3-Clause
-  license_file: LICENSE.txt
+  summary: A full-flegded processing pipeline for your MEG and EEG data
+  license: BSD-3-Clause AND Apache-2.0
+  license_file:
+    - LICENSE.txt
+    - mne_bids_pipeline/steps/freesurfer/contrib/LICENSE
 
 extra:
   recipe-maintainers:
